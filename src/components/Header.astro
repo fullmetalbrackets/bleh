@@ -1,0 +1,81 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "@consts";
+---
+
+<header>
+  <nav>
+    <h1>{SITE_TITLE}</h1>
+    <div class="internal-links">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <!-- <HeaderLink href="/about">Links</HeaderLink> -->
+      <HeaderLink href="/rss.xml">Feed</HeaderLink>
+    </div>
+  </nav>
+</header>
+<style scoped>
+  header {
+    margin: 0;
+    padding: 0 1em;
+  }
+  header * {
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+    font-family: "Permanent Marker", cursive;
+    color: var(--accent);
+  }
+  h1 a {
+    display: inline-block;
+    position: relative;
+    color: var(--accent);
+  }
+  h1 a:hover {
+    text-decoration: none;
+  }
+  h1 a::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    transform: scaleX(0);
+    height: 5px;
+    bottom: 0;
+    left: 0;
+    margin: 0 0 0.95em 0.5em;
+    background-color: var(--accent);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  h1 a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav a {
+    padding: 1em 0.5em;
+    color: var(--black);
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+  }
+  nav a.active {
+    text-decoration: none;
+    border-bottom-color: var(--accent);
+  }
+  @media (max-width: 720px) {
+    header {
+      padding: 0 0.25em;
+    }
+    nav a {
+      padding: 1em 0.25em;
+    }
+  }
+</style>
