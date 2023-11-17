@@ -80,28 +80,32 @@ h5,
 h6 {
 	margin: 0 0 0.5rem 0;
 	color: rgb(var(--black));
-	line-height: 1.2;
+	line-height: 1.125;
 	text-decoration: none;
 }
 
 h1 {
-	font-size: 3.052em;
+	font-size: 2.75em;
 }
 
 h2 {
-	font-size: 2.441em;
+	font-size: 2.125em;
 }
 
 h3 {
-	font-size: 1.953em;
+	font-size: 1.75em;
 }
 
 h4 {
-	font-size: 1.563em;
+	font-size: 1.5em;
 }
 
 h5 {
 	font-size: 1.25em;
+}
+
+h6 {
+	font-size: 1em;
 }
 
 strong,
@@ -191,6 +195,10 @@ hr {
 
 .red {
 	color: var(--accent);
+}
+
+#sections+ol {
+	margin-bottom: 2em;
 }
 
 @media (max-width: 720px) {
