@@ -90,11 +90,9 @@ Now we will set up Cloudflare DNS to proxy `music.your-domain.com` to Navidrome 
 
 6. Under **IPv4 address**, we'll use the `Tunnel ID` from above to create the URL `<tunnel-id>.cfargotunnel.com`. Use this URL as the IP address. (<a href="https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/routing-to-tunnel/dns/" target="_blank">See why here.</a>) Click **Next**.
 
-7. Under **Subdomain** put `music`, under **Domain** put`your-domain.com`, for **Type** select `HTTP` and for **URL** use the IP Address and Port on your server, e.g. `192.168.0.200:4533`.
+7. Under **Subdomain** put `music`, under **Domain** put `your-domain.com`, for **Type** select `HTTP` and for **URL** use the IP Address and Port on your server, e.g. `192.168.0.200:4533`.
 
-8. Still on the same page, go to **Private Networks**, and for **CIDR** enter your network subnet and prefix -- using the example IP above, your CIDR would be `192.168.0.0/24`. (To confirm, use the command `ip a` and in the output look for `inet 192.168.0.200/24`)
-
-9. Click the **Save tunnel** button.
+8. Click the **Save tunnel** button.
 
 > **✔ Success!**<br><br> Go to `https://music.your-domain.com` and you should reach the Navidrome UI! However, you're not the only one with access, technically anyone with the URL can reach it unabated.
 >
@@ -120,7 +118,7 @@ Now we will set up Cloudflare DNS to proxy `music.your-domain.com` to Navidrome 
 
 7. Return to the **APIs & Services** page, select **Create Credentials** -> **OAuth client ID**, and name the application.
 
-8. Under **Authorized JavaScript origins**, in the **URIs** field, enter your **team domain**. For example: `https://<your-team-name>.cloudflareaccess.com`
+8. Under **Authorized JavaScript origins**, in the **URIs** field, enter your **team domain**, i.e. `https://<your-team-name>.cloudflareaccess.com`
 
 If you don't know it, go to the Cloudflare **Zero Trust dashboard** -> **Settings** -> **Custom Pages** to see your team domain.
 
