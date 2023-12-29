@@ -18,9 +18,6 @@ const description = "List of all blog posts";
   <head>
     <BaseHead title={title} description={description} />
     <style>
-      main {
-        width: 720px;
-      }
       ul {
         display: flex;
         flex-direction: column;
@@ -51,7 +48,6 @@ const description = "List of all blog posts";
       .title {
         margin: 0 0 0.4em 0;
         color: rgb(var(--black));
-        line-height: 1.4;
       }
       .date {
         margin: 0 0 0.5em 2px;
@@ -61,6 +57,11 @@ const description = "List of all blog posts";
       }
       ul a:hover img {
         box-shadow: var(--box-shadow);
+      }
+      @media (max-width: 720px) {
+        .title {
+          font-size: 1.5em;
+        }
       }
     </style>
   </head>
