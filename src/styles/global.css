@@ -208,6 +208,14 @@ hr {
 	body {
 		font-size: 18px;
 	}
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	h2 {
+		font-size: 1.25em;
+	}
 }
 
 .sr-only {
